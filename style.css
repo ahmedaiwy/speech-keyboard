@@ -1,0 +1,90 @@
+/* Basic styling for the entire window/application */
+window {
+    background-color: #333; /* Dark background */
+}
+
+/* Styling for all KeyboardButtons */
+button {
+    min-width: 35px; /* Slightly smaller minimum width for buttons */
+    min-height: 35px; /* Slightly smaller minimum height for buttons */
+    font-size: 1.2em; /* Larger font size */
+    font-weight: bold;
+    border-radius: 8px; /* Rounded corners */
+    margin: 2px; /* Small margin between buttons */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    transition: background-color 0.1s, box-shadow 0.1s; /* Smooth transitions */
+}
+
+/* Default key styling */
+.alpha-key, .symbol-key {
+    background: linear-gradient(to bottom right, #555, #444); /* Dark gradient */
+    color: #eee; /* Light text */
+    border: 1px solid #666;
+}
+
+/* Functional key styling (e.g., SHIFT, CTRL, ALT, ESC, COMPOSE, ARROW keys) */
+.func-key, .arrow-key, .compose-key {
+    background: linear-gradient(to bottom right, #666, #555);
+    color: #fff;
+    border: 1px solid #777;
+}
+
+/* Specific styling for the FN key */
+.fn-key { /* NEW */
+    background: linear-gradient(to bottom right, #888, #777); /* Slightly different shade for FN */
+    color: #fff;
+    border: 1px solid #999;
+}
+
+/* Special keys */
+.space-key {
+    background: linear-gradient(to bottom right, #777, #666);
+    color: #fff;
+    border: 1px solid #888;
+}
+
+/* MIC button styling */
+.mic-button {
+    background: linear-gradient(to bottom right, #4CAF50, #2E7D32); /* Green gradient */
+    color: white;
+    font-size: 1.5em; /* Larger icon */
+}
+
+/* MIC button when recording (solid red) */
+.mic-recording {
+    background: linear-gradient(to bottom right, #F44336, #D32F2F); /* Red gradient */
+    color: white;
+}
+
+/* Blinking effect for recording */
+.mic-blinking {
+    animation: blink 1s infinite alternate; /* Apply blinking animation */
+}
+
+/* Hover effect */
+button:hover {
+    background: linear-gradient(to bottom right, #777, #666);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Active/Pressed state */
+button:active {
+    background: linear-gradient(to top left, #333, #222);
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.7), 0 0 0 rgba(0,0,0,0); /* Adjusted shadow for pressed look */
+}
+
+/* CAPS lock active visual feedback */
+.func-key.toggle-active, .fn-key.toggle-active { /* Added .fn-key.toggle-active */
+    background: linear-gradient(to bottom right, #FFC107, #FF8F00); /* Amber/Orange */
+    color: #333;
+    border-color: #FFEB3B;
+}
+
+/* Removed .online-mode-button and .online-active */
+
+/* --- Blinking Animation for Recording --- */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}

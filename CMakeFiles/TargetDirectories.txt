@@ -1,0 +1,3 @@
+/home/android/greatkey/CMakeFiles/VirtualKeyboard.dir
+/home/android/greatkey/CMakeFiles/edit_cache.dir
+/home/android/greatkey/CMakeFiles/rebuild_cache.dir
